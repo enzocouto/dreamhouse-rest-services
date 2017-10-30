@@ -8,13 +8,14 @@ let express = require('express'),
     brokers = require('./server/broker-service'),
     app = express();
 
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 5010);
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(compression());
 
-app.get('/properties', properties.findAll);
+app.get('/properties', properties.findAll
+		);
 app.get('/properties/favorites', properties.getFavorites);
 app.get('/properties/:id', properties.findById);
 app.post('/properties/favorites', properties.favorite);
