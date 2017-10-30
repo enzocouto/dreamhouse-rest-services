@@ -8,7 +8,7 @@ let express = require('express'),
     brokers = require('./server/broker-service'),
     app = express();
 
-app.set('port', process.env.PORT || 5010);
+app.set('port', process.env.PORT || 5000);
 
 app.use(cors());
 app.use(bodyParser.json());
