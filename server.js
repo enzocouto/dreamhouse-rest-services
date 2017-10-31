@@ -18,6 +18,7 @@ app.get('/properties', properties.findAll
 		);
 app.get('/properties/favorites', properties.getFavorites);
 app.get('/properties/:id', properties.findById);
+app.get('/properties/images/:id', properties.findImagesByIdProperty);
 app.post('/properties/favorites', properties.favorite);
 app.delete('/properties/favorites/:id', properties.unfavorite);
 

@@ -1,6 +1,7 @@
 "use strict";
 
 let PROPERTIES = require('./mock-properties').data,
+    IMAGES_PROPERTIES = require('./mock-imagesProperties').data,
     favorites = [];
 
 exports.findAll = (req, res, next) => {
@@ -18,6 +19,12 @@ exports.findById = (req, res, next) => {
     let id = req.params.id;
     res.json(PROPERTIES[id - 1]);
 }
+
+exports.findImagesByIdProperty = (req, res, next) => {
+  
+    return res.json(IMAGES_PROPERTIES);
+}
+
 
 exports.getFavorites = (req, res, next) => {
     res.json(favorites);
